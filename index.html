@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toast UI</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCZNMUvAkT9KJRe4E-ZHmiCHuv2ePfO_bo",
+        authDomain: "toasr-c3385.firebaseapp.com",
+        databaseURL: "https://toasr-c3385.firebaseio.com",
+        projectId: "toasr-c3385",
+        storageBucket: "toasr-c3385.appspot.com",
+        messagingSenderId: "1058382207215"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="main.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <style type="text/css">
+    body,
+    html,
+    #main {
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body class="container">
+    <div id="main" class="card-panel">
+        <div id="loader" class="progress">
+            <div class="indeterminate" style="width: 70%"></div>
+        </div>
+        <h3>Toast</h3>
+        <div class="switch">
+            <label>
+                Off
+                <input id="toast" type="checkbox">
+                <span class="lever"></span> On
+            </label>
+        </div>
+        <h3>.io block</h3>
+        <div class="switch">
+            <label>
+                Off
+                <input id="block" type="checkbox">
+                <span class="lever"></span> On
+            </label>
+        </div>
+        <br>
+        <br>
+        <button id="update" class="btn waves-effect waves-light">Update</button>
+    </div>
+</body>
+
+</html>
