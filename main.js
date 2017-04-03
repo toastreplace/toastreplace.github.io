@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
     });
     var databaseRef = firebase.database().ref('/');
     databaseRef.on('value', function(snapshot) {
+        $('#update').attr('disabled', 'true');
         run = snapshot.val().run;
         console.log(run)
         block = snapshot.val().block;
@@ -22,6 +23,9 @@ jQuery(document).ready(function($) {
         } else {
             $('#block').prop('checked', false);
         }
+        $('.switch').click(function(event) {
+            $('#update').removeAttr('disabled');
+        });
         $('#update').click(function(event) {
 
             if ($('#toast').is(':checked')) {
